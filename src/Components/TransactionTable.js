@@ -1,20 +1,15 @@
 import React, { useContext } from "react";
 import {
-  AiOutlineBorder,
-  AiOutlineCheckSquare,
-  AiOutlineDollarCircle,
   AiOutlineExport,
   AiOutlineImport,
   AiOutlineInfoCircle,
-  AiOutlineShoppingCart,
 } from "react-icons/ai";
 import { userContext } from "../Contexts/UserContext";
-import capitalize from "../helper/capitalize";
 import isToday from "../helper/isToday";
 import TransactionDisplay from "../Modal/TransactionDisplay";
 
 export default function TransactionTable({ filteredTransactions }) {
-  const { setModal, toggleTransactionStatus } = useContext(userContext);
+  const { setModal } = useContext(userContext);
   return (
     <div className="table-fixed  rounded bg-white shadow-md w-full">
       <thead className="block w-full py-1 border-b">

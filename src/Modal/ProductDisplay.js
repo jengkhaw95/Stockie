@@ -1,8 +1,6 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { AiOutlineClose, AiOutlineSafety } from "react-icons/ai";
-import { Link } from "react-router-dom";
 import Loading from "../Components/Loading";
-import ModalLayout from "../Components/ModalLayout";
 import PriceBar from "../Components/PriceBar";
 import { userContext } from "../Contexts/UserContext";
 

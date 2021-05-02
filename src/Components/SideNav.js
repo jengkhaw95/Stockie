@@ -2,12 +2,11 @@ import React from "react";
 import {
   AiOutlineBarChart,
   AiOutlineProfile,
-  AiOutlineSetting,
   AiOutlineShop,
   AiOutlineShopping,
   AiOutlineTool,
 } from "react-icons/ai";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function SideNav() {
   return (

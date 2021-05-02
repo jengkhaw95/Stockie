@@ -43,21 +43,21 @@ export default function UserContext({ children }) {
     setLoading(false);
   };
 
-  const fetchProduct = async () => {
-    await fetch("https://shaklee-api.herokuapp.com/products/all")
-      .then((r) => r.json())
-      .then((d) => {
-        if (d.ok) {
-          setStoreProducts(d.data);
-          setData((prev) => ({ ...prev, lastUpdate: d.lastUpdate }));
-        }
-        setLoading(false);
-      })
-      .catch((e) => {
-        console.log(e);
-        setLoading(false);
-      });
-  };
+  //const fetchProduct = async () => {
+  //  await fetch("https://shaklee-api.herokuapp.com/products/all")
+  //    .then((r) => r.json())
+  //    .then((d) => {
+  //      if (d.ok) {
+  //        setStoreProducts(d.data);
+  //        setData((prev) => ({ ...prev, lastUpdate: d.lastUpdate }));
+  //      }
+  //      setLoading(false);
+  //    })
+  //    .catch((e) => {
+  //      console.log(e);
+  //      setLoading(false);
+  //    });
+  //};
 
   const toggleTransactionStatus = (tid) => {
     setTransactions(
@@ -80,7 +80,7 @@ export default function UserContext({ children }) {
   };
 
   useEffect(() => {
-    const d = new Date();
+    //const d = new Date();
     checkProduct();
     //if (
     //  !storeProducts.data ||

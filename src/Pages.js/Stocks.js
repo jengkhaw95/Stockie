@@ -17,9 +17,7 @@ import CreateTransaction from "../Modal/CreateTransaction";
 import ProductDisplay from "../Modal/ProductDisplay";
 
 export default function Stocks() {
-  const { setModal, stocks, favouriteProducts, transactions } = useContext(
-    userContext
-  );
+  const { setModal, stocks, favouriteProducts } = useContext(userContext);
 
   const [view, setView] = useState(() => "GRID");
   const [contentLoading, setContentLoading] = useState(true);

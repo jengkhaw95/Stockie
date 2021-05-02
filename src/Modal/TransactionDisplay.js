@@ -13,10 +13,7 @@ export default function TransactionDisplay({ transaction }) {
     userContext
   );
   const [displayLoading, setDisplayLoading] = useState(true);
-  const [isChanged, setIsChanged] = useState(false);
-  const [editableTransaction, setEditableTransaction] = useState(
-    () => transaction
-  );
+  const [editableTransaction] = useState(() => transaction);
   useEffect(() => {
     setDisplayLoading(false);
   }, []);
@@ -46,27 +43,27 @@ export default function TransactionDisplay({ transaction }) {
     4. If ok, then proceed
 */
 
-  const handleEditing = () => {
-    const newTransactions = transactions.map((t) => {
-      if (t.id === transaction.id) {
-        return editableTransaction;
-      }
-      return t;
-    });
+  //const handleEditing = () => {
+  //  const newTransactions = transactions.map((t) => {
+  //    if (t.id === transaction.id) {
+  //      return editableTransaction;
+  //    }
+  //    return t;
+  //  });
 
-    // Or
-    // Check if new transaction is valid
+  //  // Or
+  //  // Check if new transaction is valid
 
-    setTransactions((prev) =>
-      prev.map((t) => {
-        if (t.id === transaction.id) {
-          return editableTransaction;
-        }
-        return t;
-      })
-    );
-    window.location.reload();
-  };
+  //  setTransactions((prev) =>
+  //    prev.map((t) => {
+  //      if (t.id === transaction.id) {
+  //        return editableTransaction;
+  //      }
+  //      return t;
+  //    })
+  //  );
+  //  window.location.reload();
+  //};
   return (
     <div
       className="rounded shadow-lg modal-y-boundary bg-white w-full mx-auto max-w-md sm:max-w-xl md:max-w-2xl xl:max-w-4xl 2xl:max-w-6xl"

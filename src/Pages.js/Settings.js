@@ -2,20 +2,14 @@ import React, { useContext, useState } from "react";
 import { userContext } from "../Contexts/UserContext";
 
 export default function Settings() {
-  const {
-    setTransactions,
-    setStocks,
-    setFavouriteProducts,
-    transactions,
-    stocks,
-    storeProducts,
-    favouriteProducts,
-  } = useContext(userContext);
-  const [themeExpanded, setThemeExpanded] = useState(false);
+  const { setTransactions, setStocks, setFavouriteProducts } = useContext(
+    userContext
+  );
+  //const [themeExpanded, setThemeExpanded] = useState(false);
 
-  const handleChangeTheme = () => {
-    setThemeExpanded(false);
-  };
+  //const handleChangeTheme = () => {
+  //  setThemeExpanded(false);
+  //};
   return (
     <div>
       <div className="text-3xl my-6 text-gray-600">Settings</div>

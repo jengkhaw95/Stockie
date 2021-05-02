@@ -1,11 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { v4 } from "uuid";
 import { useSuggestionInput } from "react-hooks-web";
-import {
-  AiFillCheckCircle,
-  AiOutlineCheck,
-  AiOutlineClose,
-} from "react-icons/ai";
+import { AiFillCheckCircle, AiOutlineClose } from "react-icons/ai";
 import { userContext } from "../Contexts/UserContext";
 
 const FLOW = [
