@@ -6,7 +6,7 @@
     "start_url": "/",
     "name": "Stockie",
     "description": "An inventory app for Shaklee Malaysia Product",
-    "short_name": "An inventory app for Shaklee Malaysia Product",
+    "short_name": "Stockie Shaklee Malaysia",
     "icons": [
         {
             "src": "/icon-192x192.png",
