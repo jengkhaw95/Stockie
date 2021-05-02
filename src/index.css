@@ -1,13 +1,115 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-size: 12px;
+}
+html {
+  --tw-bg-opacity: 1;
+  background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
+}
+
+input {
+  border-style: solid;
+  -webkit-appearance: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+  background: none; /* color of the tracking area */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #ccc; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid white; /* creates padding around scroll thumb */
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #ccc white;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+input:checked + svg {
+  display: block;
+}
+
+.mx-0 {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+.text-black {
+  --tw-text-opacity: 1 !important;
+  color: rgba(0, 0, 0, var(--tw-text-opacity)) !important;
+}
+
+.modal-y-boundary {
+  max-height: 90%;
+}
+
+.shiny-button {
+  display: block;
+  height: max-content;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  padding: 0.5rem 1rem;
+  background-color: rgb(67, 181, 129);
+  font-size: 1rem;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+.shiny-button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.shiny-button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  width: 20px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transform: translateX(-30px) skewX(-15deg);
+  animation: shine 2s linear 0s infinite normal;
+}
+
+@keyframes shine {
+  from {
+    transform: translateX(-30px) skewX(-15deg);
+  }
+  to {
+    transform: translateX(600px) skewX(-15deg);
+  }
+}
+
+@media (min-width: 640px) {
+  :root {
+    font-size: 16px;
+  }
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 1024px) {
+}
+@media (min-width: 1536px) {
 }

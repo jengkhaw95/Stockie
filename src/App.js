@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
+import UserContext from "./Contexts/UserContext";
+import WebLayout from "./Layout/WebLayout";
+import Overview from "./Pages.js/Overview";
+import Settings from "./Pages.js/Settings";
+import Stocks from "./Pages.js/Stocks";
+import Store from "./Pages.js/Store";
+import Records from "./Pages.js/Records";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <UserContext>
+        <WebLayout>
+          <Switch>
+            <Route exact path="/">
+              <Overview />
+            </Route>
+            <Route exact path="/stocks">
+              <Stocks />
+            </Route>
+            <Route exact path="/records">
+              <Records />
+            </Route>
+            <Route exact path="/store">
+              <Store />
+            </Route>
+            <Route exact path="/settings">
+              <Settings />
+            </Route>
+            <Route exact path="*">
+              <Redirect to="/" />
+            </Route>
+          </Switch>
+        </WebLayout>
+      </UserContext>
+    </BrowserRouter>
   );
 }
 
