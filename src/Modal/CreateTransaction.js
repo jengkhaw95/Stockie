@@ -438,7 +438,7 @@ const TransactionOverview = ({
       transactionProducts.reduce(
         (a, b) => ({
           dn: a.dn + (b.dn?.price || 0) * b.count,
-          srp: a.srp + (b.srp?.price || 0) * b.count,
+          srp: a.srp + (b.srp?.price || b.dn?.price || 0) * b.count,
           uv: a.uv + (b.dn?.uv || 0) * b.count,
           pv: a.pv + (b.dn?.pv || 0) * b.count,
         }),

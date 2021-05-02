@@ -16,7 +16,6 @@ export default function Store() {
   );
 
   const [contentLoading, setContentLoading] = useState(true);
-  console.log(storeProducts);
   const { state: storeState, onChange: storeOnChange } = useSuggestionInput({
     suggestions: storeProducts.map((s) => ({
       ...s,

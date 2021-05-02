@@ -73,19 +73,19 @@ export default function ProductDisplay({ prod_no }) {
             {
               <PriceBar
                 dn={currentProduct.dn.price}
-                srp={currentProduct.srp.price}
+                srp={currentProduct.srp?.price || null}
               />
             }
             <div className="flex flex-row justify-between items-center w-full my-4 md:my-6">
               <div></div>
               <div className="flex flex-col items-center space-y-2">
                 <AiOutlineSafety className="text-3xl text-gray-600" />
-                <div>{`${currentProduct.srp.uv} UV`}</div>
+                <div>{`${currentProduct.dn.uv} UV`}</div>
               </div>
               <div className="w-px h-11 bg-gray-400"></div>
               <div className="flex flex-col items-center space-y-2">
                 <AiOutlineSafety className="text-3xl text-gray-600" />
-                <div>{`${currentProduct.srp.pv} PV`}</div>
+                <div>{`${currentProduct.dn.pv} PV`}</div>
               </div>
               <div></div>
             </div>
