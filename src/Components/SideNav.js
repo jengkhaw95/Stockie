@@ -7,13 +7,21 @@ import {
   AiOutlineTool,
 } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
+import logo from "./Logo.jpg";
 
 export default function SideNav() {
   return (
     <div className="fixed h-20 min-h-0 w-full lg:w-60 bottom-0 lg:h-auto lg:max-h-full  flex flex-row lg:flex-col lg:min-h-full bg-white z-10 shadow-lg">
-      <div className="hidden lg:block text-2xl border-b font-bold text-green-500 p-8">
-        Stockie
-      </div>
+      <div
+        className="hidden lg:block text-2xl border-b font-bold text-green-500 p-12"
+        style={{
+          backgroundImage: `url("https://res.cloudinary.com/jengk95/image/upload/v1621062501/Logo_nz9l6q.jpg")`,
+          backgroundSize: "contain",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      ></div>
+
       <div className="lg:border-b lg:p-8 flex-grow">
         <ul
           className="flex flex-row justify-between h-full lg:h-auto lg:block"
